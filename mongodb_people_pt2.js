@@ -8,7 +8,7 @@ db.people.insertOne({first_name: 'Wilber', last_name: 'Johnson', email: 'whatema
 db.people.updateOne({first_name: 'Clarence', state: 'North Dakota'}, {$set: {state: 'South Dakota'}})
 
 // Question 4
-db.people.updateOne({first_name: 'Rebecca', last_name: 'Hayes'}, {$set: {email: ''}})
+db.people.updateOne({first_name: 'Rebecca', last_name: 'Hayes'}, {$unset: {email: 1}})
 
 // Question 5
 db.people.updateMany({state: 'Missouri'}, {$inc: {age: 1}})
